@@ -1,0 +1,22 @@
+/* TextField.css */
+.text-field {
+    width: 85%;
+    box-sizing: border-box;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 25px;
+    border: 0px solid;
+    background-color: #F4F4F4;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.text-field:focus {
+    outline: none;
+}
+
+.text-field::placeholder {
+    color: grey;
+}
+
