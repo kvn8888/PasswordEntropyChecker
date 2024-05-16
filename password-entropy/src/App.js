@@ -4,7 +4,6 @@ import TextField from './TextField.js';
 import React, { Component } from "react";
 import MotivationalCue from "./MotivationalCue";
 import Tools from "./Tools";
-import EntropyCalculator from "./EntropyCalculator";
 
 class App extends Component {
     constructor(props) {
@@ -19,7 +18,7 @@ class App extends Component {
 
     PasswordStrength() {
         const password = this.state.password;
-        let strength = this.state.strength;
+        let strength = 0;
         const length = password.length;
 
         const uppercase_regex = /[A-Z]/g;
@@ -33,8 +32,9 @@ class App extends Component {
         if(special_char_regex.test(password)) {strength += 34;}
 
         const entropy = length * this.log2(strength);
+        const roundedEntropy = parseFloat(entropy.toFixed(3));
 
-        this.setState({entropy: entropy});
+        this.setState({entropy: roundedEntropy});
         this.setState({strength: strength});
         this.setState({length: length});
 
@@ -57,7 +57,7 @@ class App extends Component {
             <MotivationalCue entropy={this.state.entropy}></MotivationalCue>
             <TextField setPassword={this.setPassword}></TextField>
           </header>
-            <Tools></Tools>
+            <Tools entropy={this.state.entropy} strength={this.state.strength} length={this.state.length}></Tools>
         </div>
       );
     }
