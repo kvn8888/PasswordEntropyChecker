@@ -1,0 +1,6 @@
+.EntropyCalculator {
+    background-color: #61dafb;
+    padding: 10px;
+    margin: 10px;
+    flex: 1; /* Allow it to grow and shrink as needed */
+}
