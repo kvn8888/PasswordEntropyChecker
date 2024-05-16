@@ -11,14 +11,15 @@ class App extends Component {
         super(props);
         this.state = {
         password: '',
-        entropy: 0
+        entropy: 0,
+        strength: 0,
+        length: 0
         }
     }
 
     PasswordStrength() {
-        let strength = 0;
-        let message;
         const password = this.state.password;
+        let strength = this.state.strength;
         const length = password.length;
 
         const uppercase_regex = /[A-Z]/g;
@@ -32,7 +33,10 @@ class App extends Component {
         if(special_char_regex.test(password)) {strength += 34;}
 
         const entropy = length * this.log2(strength);
+
         this.setState({entropy: entropy});
+        this.setState({strength: strength});
+        this.setState({length: length});
 
     }
 
