@@ -1,0 +1,12 @@
+.ToolsLayout {
+    display: flex;
+    flex-direction: row;
+    background-color: #F4F4F4;
+    margin: 50px 20px 20px;
+}
+
+@media (max-width: 1000px) {
+    .ToolsLayout {
+        flex-direction: column;
+    }
+}

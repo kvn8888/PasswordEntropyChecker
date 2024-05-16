@@ -1,5 +1,5 @@
 import React from "react";
-import './EntropyCalculator.css';
+import './Tools.css';
 
 class EntropyCalculator extends React.Component {
     render() {
