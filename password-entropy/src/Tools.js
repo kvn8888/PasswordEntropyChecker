@@ -10,7 +10,7 @@ class Tools extends React.Component {
         return (
             <div className="ToolsLayout">
                 <EntropyCalculator password_length={length} unique_characters={strength} entropy={entropy}/>
-                <CompareToEncryption />
+                <CompareToEncryption entropy={entropy}/>
                 <TimeToBruteForce />
             </div>
         );

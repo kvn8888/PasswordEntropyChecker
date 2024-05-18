@@ -4,3 +4,28 @@
     margin: 10px;
     flex: 1; /* Allow it to grow and shrink as needed */
 }
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background: #F9F9F9;
+    border-radius: 5px;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    flex: 1;
+}
+
+.tabs button.active {
+    font-weight: bold;
+    background: #ffbb4e;
+    border-radius: 5px;
+}
+
+.tab-content {
+    padding: 20px;
+    /*border-top: 1px solid #ccc;*/
+}
