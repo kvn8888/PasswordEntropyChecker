@@ -57,7 +57,7 @@ class App extends Component {
             <MotivationalCue entropy={this.state.entropy}></MotivationalCue>
             <TextField setPassword={this.setPassword}></TextField>
           </header>
-            <Tools entropy={this.state.entropy} strength={this.state.strength} length={this.state.length}></Tools>
+            <Tools entropy={this.state.entropy} strength={this.state.strength} length={this.state.length} password={this.state.password}></Tools>
         </div>
       );
     }
