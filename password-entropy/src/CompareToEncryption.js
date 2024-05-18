@@ -48,7 +48,13 @@ class CompareToEncryption extends React.Component {
                 <div className="tab-content">
                     {this.state.activeTab === 'AES-128' && <div>{this.default_tabs()}</div>}
                     {this.state.activeTab === 'AES-256' && <div>{this.default_tabs()}</div>}
-                    {this.state.activeTab === 'tab3' && <div>Custom</div>}
+                    {this.state.activeTab === 'tab3' &&
+                        <div>
+                            <label>
+                                <input className="CustomEntropy" type="number" />
+                            </label>
+                        </div>
+                    }
                 </div>
             </div>
         )

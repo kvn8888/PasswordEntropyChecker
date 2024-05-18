@@ -6,7 +6,7 @@
 }
 .tabs {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     background: #F9F9F9;
     border-radius: 5px;
 }
@@ -28,4 +28,25 @@
 .tab-content {
     padding: 20px;
     /*border-top: 1px solid #ccc;*/
+}
+
+.CustomEntropy {
+    outline: none;
+    /*border: #ffac1f solid 3px;*/
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.CustomEntropy focus {
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
