@@ -1,7 +1,6 @@
 import React from "react";
 import EntropyCalculator from "./EntropyCalculator";
 import './ToolsLayout.css';
-import CompareToEncryption from "./CompareToEncryption";
 import TimeToBruteForce from "./TimeToBruteForce";
 import PasswordValidator from "./PasswordValidator";
 
