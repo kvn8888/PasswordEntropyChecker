@@ -25,13 +25,18 @@ class CompareToEncryption extends React.Component {
         const comparisonValueExponential = comparisonValue.toExponential(3);
         const [mantissa, exponent] = comparisonValueExponential.split('e');
 
-        const latexExpression = `\\frac{2^{${entropy.toFixed(3)}}}{2^{${entropy_specification}}} = ${mantissa} \\times 10^{${exponent}}`;
+        const latexExpression = `\\frac{2^{${entropy.toFixed(3)}}}{2^{${entropy_specification}}} = ${mantissa} \\times 10^{${Math.abs(exponent)}}`;
 
         return(
             <div>
-                <p>
-                    Your password is <InlineMath math={latexExpression} /> times stronger than {this.state.activeTab}
-                </p>
+                    {comparisonValue > 1?
+                        <p>
+                            Your password is <InlineMath math={latexExpression} /> times stronger than {this.state.activeTab}
+                        </p> :
+                        <p>
+                            Your password is <InlineMath math={latexExpression} /> times weaker than {this.state.activeTab}
+                        </p>
+                    }
             </div>
         )
     }

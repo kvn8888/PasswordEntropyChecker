@@ -2,6 +2,7 @@ import React from "react";
 import './Tools.css';
 import { InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
+import CompareToEncryption from "./CompareToEncryption";
 
 class EntropyCalculator extends React.Component {
     render() {
@@ -16,6 +17,7 @@ class EntropyCalculator extends React.Component {
             <div className="Tool">
                 <h3>Entropy Calculation</h3>
                 <InlineMath math={inlineFormula}></InlineMath>
+                <CompareToEncryption entropy={entropy}/>
             </div>
         );
     }
