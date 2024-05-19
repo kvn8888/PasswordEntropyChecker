@@ -29,7 +29,7 @@ class App extends Component {
         if(uppercase_regex.test(password)) {strength += 26;}
         if(lowercase_regex.test(password)) {strength += 26;}
         if(digit_regex.test(password)) {strength += 10;}
-        if(special_char_regex.test(password)) {strength += 34;}
+        if(special_char_regex.test(password)) {strength += 32;}
 
         const entropy = length * this.log2(strength);
         const roundedEntropy = parseFloat(entropy.toFixed(3));
