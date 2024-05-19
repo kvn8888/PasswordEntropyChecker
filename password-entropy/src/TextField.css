@@ -1,11 +1,17 @@
 /* TextField.css */
-.text-field {
-    width: 85%;
-    box-sizing: border-box;
+.InputField {
+    display: flex;
+    align-items: center;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+.text-field {
+    margin-right: 16px;
+    flex: 1;
+    box-sizing: border-box;
     border-radius: 25px;
-    border: 0px solid;
+    border: none;
     background-color: #F4F4F4;
     padding: 10px;
     padding-left: 15px;
@@ -20,3 +26,38 @@
     color: grey;
 }
 
+.ToggleVisibility {
+    background: #000000;
+    border: none;
+    border-radius: 36px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+/* App.css */
+
+/* Hide the password visibility toggle icon in all major browsers */
+
+/* Microsoft Edge */
+input::-ms-reveal {
+    display: none;
+}
+
+/*!* Webkit browsers (Chrome, Safari, Opera) *!*/
+/*input::-webkit-credentials-auto-fill-button {*/
+/*    display: none;*/
+/*    visibility: hidden;*/
+/*}*/
+
+/*input::-webkit-password-toggle-button {*/
+/*    display: none;*/
+/*}*/
+
+/*!* Firefox *!*/
+/*input[type="password"]::-moz-password-strength-meter {*/
+/*    display: none;*/
+/*}*/
