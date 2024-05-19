@@ -31,10 +31,10 @@ class CompareToEncryption extends React.Component {
             <div>
                     {comparisonValue > 1?
                         <p>
-                            Your password is <InlineMath math={latexExpression} /> times stronger than {this.state.activeTab}
+                            Your password is <InlineMath math={latexExpression} /> times stronger than {this.state.entropy_specification} bits of entropy
                         </p> :
                         <p>
-                            Your password is <InlineMath math={latexExpression} /> times weaker than {this.state.activeTab}
+                            Your password is <InlineMath math={latexExpression} /> times weaker than {this.state.entropy_specification} bits of entropy
                         </p>
                     }
             </div>
@@ -53,13 +53,9 @@ class CompareToEncryption extends React.Component {
                 <div className="tab-content">
                     {this.state.activeTab === 'AES-128' && <div>{this.default_tabs()}</div>}
                     {this.state.activeTab === 'AES-256' && <div>{this.default_tabs()}</div>}
-                    {this.state.activeTab === 'tab3' &&
-                        <div>
-                            <label>
-                                <input className="CustomEntropy" type="number" />
-                            </label>
-                        </div>
-                    }
+                    {this.state.activeTab === 'tab3' && <div>                    <label>
+                        <input className="CustomEntropy" type="number" onChange={(event) => {this.setState({entropy_specification: event.target.value})}}/>
+                    </label>{this.default_tabs()}</div>}
                 </div>
             </div>
         )
