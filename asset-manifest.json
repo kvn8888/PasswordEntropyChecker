@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PasswordEntropyChecker/static/css/main.692e3117.css",
+    "main.css": "/PasswordEntropyChecker/static/css/main.2ed51bd1.css",
     "main.js": "/PasswordEntropyChecker/static/js/main.2fbbce89.js",
     "static/js/453.42da10f0.chunk.js": "/PasswordEntropyChecker/static/js/453.42da10f0.chunk.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/PasswordEntropyChecker/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -64,12 +64,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/PasswordEntropyChecker/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/PasswordEntropyChecker/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/PasswordEntropyChecker/index.html",
-    "main.692e3117.css.map": "/PasswordEntropyChecker/static/css/main.692e3117.css.map",
+    "main.2ed51bd1.css.map": "/PasswordEntropyChecker/static/css/main.2ed51bd1.css.map",
     "main.2fbbce89.js.map": "/PasswordEntropyChecker/static/js/main.2fbbce89.js.map",
     "453.42da10f0.chunk.js.map": "/PasswordEntropyChecker/static/js/453.42da10f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.692e3117.css",
+    "static/css/main.2ed51bd1.css",
     "static/js/main.2fbbce89.js"
   ]
 }
