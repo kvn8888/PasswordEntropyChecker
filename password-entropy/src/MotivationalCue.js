@@ -5,7 +5,7 @@ class MotivationalCue extends React.Component {
     message() {
         const entropy = this.props.entropy;
 
-        if (entropy <= 40) {return <h1>Yikes! That's a <italic>very</italic> bad password</h1>}
+        if (entropy <= 40) {return <h1>Yikes! That's a <i>horrible</i> password</h1>}
         else if (entropy <= 50) {return <h1>It would take a few seconds to crack your password</h1>}
         else if (entropy <= 60) {return <h1>It would take a few minutes to crack your password</h1>}
         else if (entropy <= 70) {return <h1>It would take a few hours to crack your password</h1>}
