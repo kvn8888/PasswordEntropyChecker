@@ -1,7 +1,12 @@
 import React from "react";
 import './Tools.css'
+// import 'DevUI.css'
 
 class PasswordValidator extends React.Component {
+
+    //TODO: Add the ability to see character combinations contributing to score
+    //TODO: Add the ability to customize special symbol count
+    //TODO: Add css animation where digits pop out the left
 
     render() {
         return(

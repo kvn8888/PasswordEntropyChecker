@@ -16,6 +16,9 @@ class App extends Component {
         }
     }
 
+    //TODO: Add toggle for css
+    //TODO: Add green for success
+
     PasswordStrength() {
         const password = this.state.password;
         let strength = 0;
@@ -52,12 +55,12 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
-            <h3>Password Entropy Checker</h3>
-            <h5>Even through no data is saved, enter in fake passwords</h5>
+            <h3 className="website-name">Password Entropy Checker</h3>
             <MotivationalCue entropy={this.state.entropy}></MotivationalCue>
             <TextField setPassword={this.setPassword}></TextField>
           </header>
             <Tools entropy={this.state.entropy} strength={this.state.strength} length={this.state.length} password={this.state.password}></Tools>
+            <h5 className="disclaimer">Even through no data is saved, enter in fake passwords</h5>
         </div>
       );
     }
