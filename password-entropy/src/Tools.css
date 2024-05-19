@@ -17,6 +17,7 @@
     background: none;
     cursor: pointer;
     flex: 1;
+    color: black;
 }
 
 .tabs button.active {
