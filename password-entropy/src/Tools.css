@@ -37,9 +37,9 @@
     border-radius: 15px;
 }
 
-.CustomEntropy focus {
-    outline: none;
-}
+/*.CustomEntropy focus {*/
+/*    outline: none;*/
+/*}*/
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -52,5 +52,5 @@ input[type="number"] {
 }
 
 .not_present {
-    color: #bdbdbd;
+    color: rgba(0, 0, 0, 0.32);
 }
