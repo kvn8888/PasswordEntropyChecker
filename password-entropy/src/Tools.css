@@ -3,15 +3,16 @@
     padding: 10px;
     margin: 10px;
     border-radius: 6px;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 
     flex: 1; /* Allow it to grow and shrink as needed */
 }
 .tabs {
     display: flex;
     margin-bottom: 5px;
-    background: #F9F9F9;
+    background: #F4F4F4;
     border-radius: 5px;
+    flex-grow: 1;
 }
 
 .tabs button {
@@ -25,8 +26,9 @@
 
 .tabs button.active {
     font-weight: bold;
-    background: #ffbb4e;
+    background: #000000;
     border-radius: 5px;
+    color: white;
 }
 
 .tab-content {
@@ -55,6 +57,83 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+ .list {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     padding: 20px;
+     box-sizing: border-box;
+ }
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px; /* Add some spacing between items */
+}
+
+.present {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+
+
+    color: black;
+}
+
 .not_present {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+
+
     color: rgba(0, 0, 0, 0.32);
+}
+
+.text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.bonus {
+    position: absolute;
+    right: 20px; /* Adjust based on your layout */
+    text-align: right;
+    animation: slideRight 0.5s ease-out;
+    color: green;
+}
+
+.Tool .input-container {
+    display: flex;
+    align-items: center;
+}
+
+.Tool .Count {
+    margin-right: 15px;
+    padding: 8px 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        color: black;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        color: green;
+        transform: translateX(0);
+    }
 }

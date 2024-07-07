@@ -1,21 +1,41 @@
 import React from "react";
 import './Tools.css'
-// import 'DevUI.css'
 
 class PasswordValidator extends React.Component {
-
-    //TODO: Add the ability to see character combinations contributing to score
-    //TODO: Add the ability to customize special symbol count
-    //TODO: Add css animation where digits pop out the left
-
     render() {
-        return(
+        const { length, strength, password } = this.props;
+
+        const hasLowercase = /[a-z]/.test(password);
+        const hasUppercase = /[A-Z]/.test(password);
+        const hasDigits = /[0-9]/.test(password);
+        const hasSymbols = /[~!@#$%^&*()_+{}|:"<>?`\-=[\]\\;',./]/g.test(password);
+
+        return (
             <div className="Tool">
-                <h3>{this.props.length} characters containing</h3>
-                {/[a-z]/g.test(this.props.password) ? <p>Lower case</p> : <p className="not_present">Lower case</p>}
-                {/[A-Z]/g.test(this.props.password) ? <p>Upper case</p> : <p className="not_present">Upper case</p>}
-                {/[0-9]/g.test(this.props.password) ? <p>Digits</p> : <p className="not_present">Digits</p> }
-                {/[~!@#$%^&*()_+{}|:"<>?`\-=[\]\\;',./]/g.test(this.props.password) ? <p>Symbols</p> : <p className="not_present">Symbols</p> }
+                <h3>{length} characters containing</h3>
+                <div className="list">
+                    <div className='item'>
+                        <p className={hasLowercase ? 'present' : 'not_present'}>
+                            <span className="text">Lower case</span> {hasLowercase && <span className="bonus">+26</span>}
+                        </p>
+                    </div>
+                    <div className='item'>
+                        <p className={hasUppercase ? 'present' : 'not_present'}>
+                            <span className="text">Upper case</span> {hasUppercase && <span className="bonus">+26</span>}
+                        </p>
+                    </div>
+                    <div className='item'>
+                        <p className={hasDigits ? 'present' : 'not_present'}>
+                            <span className="text">Digits</span> {hasDigits && <span className="bonus">+10</span>}
+                        </p>
+                    </div>
+                    <div className='item'>
+                        <p className={hasSymbols ? 'present' : 'not_present'}>
+                            <span className="text">Symbols</span> {hasSymbols && <span className="bonus">+32</span>}
+                        </p>
+                    </div>
+                    <p className="unique-character-count">{strength} unique combinations</p>
+                </div>
             </div>
         );
     }
