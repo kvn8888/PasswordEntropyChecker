@@ -60,8 +60,9 @@ class App extends Component {
             <TextField setPassword={this.setPassword}></TextField>
           </header>
             <Tools entropy={this.state.entropy} strength={this.state.strength} length={this.state.length} password={this.state.password}></Tools>
-            <h5 className="disclaimer">Even through everything is local, enter in fake passwords</h5>
-        </div>
+            <h5 className="disclaimer">Everything is processed locally, no data is sent to a server</h5>
+            
+          </div>
       );
     }
 }
